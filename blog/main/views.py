@@ -2,9 +2,11 @@
 
 from flask import Flask, request, jsonify
 
-from . import main
+
 from .. import db
-from .. models import Post
+from ..models import Post
+from . import main
+
 
 @main.route('/')
 def index():
