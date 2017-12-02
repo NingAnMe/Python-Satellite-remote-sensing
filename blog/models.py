@@ -29,11 +29,11 @@ class User(db.Model):
     username = db.Column(db.String(128), nullable=False)
     password_hash = db.Column(db.String(128))
 
-    @preperty
+    @property
     def password(self):
         raise AttributeError('password is not a readable attribute')
 
-    @passwrod.setter
+    @password.setter
     def password(self, password):
         self.password_hash = generate_password_hash(pasword)
 
