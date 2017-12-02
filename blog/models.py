@@ -5,6 +5,7 @@ from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 
 from . import db
+from . import login_manager
 
 
 class Post(db.Model):
@@ -38,4 +39,13 @@ class User(db.Model):
         self.password_hash = generate_password_hash(password)
 
     def verify_password(self, password):
+        '''用户认证方法
+        '''
         return check_password_hash(self.password_hash, password)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    '''加载用户的回调函数
+    '''
+    return User.query.get(int(user_id))
