@@ -10,4 +10,6 @@ from .forms import LoginForm
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
+    if form.validate_on_submit(): # 如果 WTF 验证通过
+        return redirect(url_for('main.index'))
     return render_template('auth/login.html', form=form)
