@@ -13,9 +13,10 @@ manager = Manager(app)
 def make_shell_context():
     return dict(app=app, db=db, User=User,)
 
-
+# 添加 shell 参数，用于调试程序
 manager.add_command('shell', Shell(make_context=make_shell_context))
 
+# 添加 test 参数，用于启动单元测试
 @manager.command
 def test():
     '''启动单元测试'''
