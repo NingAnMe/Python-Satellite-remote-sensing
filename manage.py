@@ -1,13 +1,21 @@
 #! /usr/bin/env python
 # coding:utf-8
 
-from blog import create_app
-from flask_script import Manager
+from flask_script import Manager, Shell
+
+from blog import create_app, db
+from blog.models import User
 
 app = create_app()
-app.app_context().push()
-
 manager = Manager(app)
+
+
+def make_shell_context():
+    return dict(app=app, db=db, User=User,)
+
+
+manager.add_command('shell', Shell(make_context=make_shell_context))
+
 
 if __name__ == '__main__':
     manager.run()
