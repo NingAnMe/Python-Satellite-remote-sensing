@@ -6,7 +6,10 @@ from flask_script import Manager, Shell
 from blog import create_app, db
 from blog.models import User
 
-app = create_app()
+# 创建 app
+app = create_app('test')
+
+# 创建脚本管理器
 manager = Manager(app)
 
 
