@@ -8,6 +8,9 @@ class Config(object):
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
+    # Flask-WTF 需要的密钥
+    SECRET_KEY = 'please dont to guess this'
+
     # 初始化 APP
     @staticmethod
     def init_app(app):
@@ -35,7 +38,7 @@ class TestConfig(Config):
         DB_URI = 'mysql://{}:{}@{}/{}'.format(
                 USERNAME, PASSWORD, HOSTNAME, DATABASE,)
         SQLALCHEMY_DATABASE_URI = DB_URI
-        
+
         # 是否开启DEBUG模式
         DEBUG = True
 
