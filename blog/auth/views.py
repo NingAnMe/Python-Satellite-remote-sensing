@@ -13,3 +13,7 @@ def login():
     if form.validate_on_submit(): # 如果 WTF 验证通过
         return redirect(url_for('main.index'))
     return render_template('auth/login.html', form=form)
+
+@auth.route('/init', methods=['GET', 'POST'])
+def init():
+    pass
