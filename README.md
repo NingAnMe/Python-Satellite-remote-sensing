@@ -15,3 +15,6 @@ $ sudo mysql -u root -p
 
 > quit;
 ```
+
+# TODO
+[] 初始化 BLOG
