@@ -22,7 +22,7 @@ class BlogConfig(Config):
         DATABASE = 'blog'
         USERNAME = 'blog'
         PASSWORD = 'blog'
-        DB_URI = 'mysql://{}:{}@{}/{}'.format(
+        DB_URI = 'mysql+pymysql://{}:{}@{}/{}'.format(
                 USERNAME, PASSWORD, HOSTNAME, DATABASE,)
         SQLALCHEMY_DATABASE_URI = DB_URI
 
@@ -35,7 +35,7 @@ class TestConfig(Config):
         DATABASE = 'test'
         USERNAME = 'test'
         PASSWORD = 'test'
-        DB_URI = 'mysql://{}:{}@{}/{}'.format(
+        DB_URI = 'mysql+pymysql://{}:{}@{}/{}'.format(
                 USERNAME, PASSWORD, HOSTNAME, DATABASE,)
         SQLALCHEMY_DATABASE_URI = DB_URI
 

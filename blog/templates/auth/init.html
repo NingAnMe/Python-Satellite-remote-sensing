@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+init.html
+<form method="POST" action="" class="form" role="form">
+    {{ form.hidden_tag() }}
+    {{ form.username.label }}
+    {{ form.username(id='username') }}
+    {{ form.password.label }}
+    {{ form.password(id='password') }}
+    {{ form.password_confirm.label }}
+    {{ form.password(id='password_confirm') }}
+    {{ form.submit(id='submit') }}
+</form>
