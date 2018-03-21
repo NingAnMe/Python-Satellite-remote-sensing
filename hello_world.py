@@ -1,7 +1,9 @@
 # coding:utf-8
 
-# 带入 Flask 类，这个类的实例是一个 WSGI 应用程序
+# 引入 Flask 类，这个类的实例是一个 WSGI 应用程序
 from flask import Flask
+# 引入 render_template() 方法，这个方法对 jinja 模板进行渲染
+from flask import render_template
 
 """第一个参数是应用模块或者包的名称，如果你使用单一的模块（如本例），你应该使用 
 __name__ ，因为模块的名称将会因其作为单独应用启动还是作为模块导入而有不同
@@ -19,9 +21,10 @@ def index():
     return "Index"
 
 
-@app.route('/hello')
-def hello_world():
-    return "Hello world!"
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello_world(name=None):
+    return render_template('hello.html', name=name)
 
 
 @app.route('/user/<username>')
