@@ -24,6 +24,11 @@ def hello_world():
     return "Hello world!"
 
 
+@app.route('/user/<username>')
+def user(username):
+    return "User: %s" % username
+
+
 if __name__ == '__main__':
     app.run()
 
