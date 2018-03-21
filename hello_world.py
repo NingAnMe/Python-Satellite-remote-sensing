@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 """route 装饰器可以告诉我们什么样的 URL 可以触发函数,这个函数返回我们希望在网页
-中看到的信息"""
+中看到的信息。Flask 的 URL 规则基于 Werkzeug 的路由模块。"""
 
 
 @app.route('/')
@@ -46,5 +46,16 @@ app.run(host='0.0.0.0')"""
 app.debug = True
 app.run()
 2）
-app.run(debug=True)
-"""
+app.run(debug=True)"""
+
+"""构造 URL
+print url_for('index')
+print url_for('hello_world')
+print url_for('user', next='/')
+print url_for('user', username='John Doe')
+
+结果：
+/
+/hello
+/user?next=/
+/user/John%20Doe"""
