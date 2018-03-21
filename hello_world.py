@@ -15,10 +15,26 @@ app = Flask(__name__)
 
 
 @app.route('/')
+def index():
+    return "Index"
+
+
+@app.route('/hello')
 def hello_world():
-    return 'Hello world!'
+    return "Hello world!"
 
 
 if __name__ == '__main__':
     app.run()
-    # app.run(host='0.0.0.0')  # 这个方法可以让服务器可以在公开端口访问
+
+"""外部可访问的服务器服务
+app.run(host='0.0.0.0')"""
+
+"""调试
+调试模式是绝对不可以使用在生产环境中的。
+1）
+app.debug = True
+app.run()
+2）
+app.run(debug=True)
+"""
