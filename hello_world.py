@@ -29,8 +29,13 @@ def user(username):
     return "User: %s" % username
 
 
+@app.route('/post/<int:post_id>')
+def post(post_id):
+    return "Post: %d" % post_id
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
 """外部可访问的服务器服务
 app.run(host='0.0.0.0')"""
