@@ -5,7 +5,7 @@ from flask import Flask
 # 引入 render_template() 方法，这个方法对 jinja 模板进行渲染
 from flask import render_template
 
-"""第一个参数是应用模块或者包的名称，如果你使用单一的模块（如本例），你应该使用 
+"""第一个参数是应用模块或者包的名称，如果你使用单一的模块（如本例），你应该使用
 __name__ ，因为模块的名称将会因其作为单独应用启动还是作为模块导入而有不同
 （ 也即是 '__main__' 或实际的导入名）。"""
 
