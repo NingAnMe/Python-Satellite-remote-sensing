@@ -33,13 +33,13 @@ def get_gtf(infile):
 
 
 def get_project(infile):
-    return gdal.Open(infile).Getproject()
+    return gdal.Open(infile).GetProjection()
 
 
 def get_row_col(gtf, x_min, y_max, x_max, y_min):
     row = int(x_max - x_min) / abs(gtf[5])
     col = int(y_max - y_min) / gtf[1]
-    return row, col
+    return int(row), int(col)
 
 
 def get_new_gtf(gtf, y_min, y_max):
@@ -48,7 +48,7 @@ def get_new_gtf(gtf, y_min, y_max):
     return gtf_new
 
 
-def mosaic(infiles, outfile):
+def mosaic_geotiff(infiles, outfile):
     x_min, y_max, x_max, y_min = get_extent(infiles)
 
     file_first = infiles[0]
@@ -69,8 +69,10 @@ def mosaic(infiles, outfile):
         dataset_in = gdal.Open(infile)
         trans = gdal.Transformer(dataset_in, dataset_out, [])
         success, xyz = trans.TransformPoint(False, 0, 0)
+        print(success, xyz)
         x, y, z = map(int, xyz)
-        data = dataset_in.GetRasterBand(1).ReadAsAyyay()
+        data = dataset_in.GetRasterBand(1).ReadAsArray()
+        print(data.shape)
         band_out.WriteArray(data, x, y)
 
 
@@ -82,8 +84,7 @@ if __name__ == "__main__":
     print('DIR_IN: {}'.format(dir_in))
     print('FILE_OUT: {}'.format(file_out))
 
-    filenames = glob.glob(os.path.join(dir_in, '*.tiff'))
-    infiles_ = [os.path.join(dir_in, filename) for filename in filenames]
+    infiles_ = glob.glob(os.path.join(dir_in, '*.tif'))
     map(print, infiles_)
-    mosaic(infiles_, file_out)
+    mosaic_geotiff(infiles_, file_out)
     print('>>> Outfile: {}'.format(file_out))
