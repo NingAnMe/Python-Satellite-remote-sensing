@@ -101,6 +101,6 @@ ENV/
 .mypy_cache/
 
 .idea
-tmp*/
+.vscode
 
-result/
+resultData/

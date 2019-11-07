@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE GranuleMetaDataFile SYSTEM "http://ecsinfo.gsfc.nasa.gov/ECSInfo/ecsmetadata/dtds/DPL/ECS/ScienceGranuleMetadata.dtd">
+<GranuleMetaDataFile>
+    <DTDVersion>1.0</DTDVersion>
+    <DataCenterId>EDC</DataCenterId>
+    <GranuleURMetaData>
+        <GranuleUR>SC:MCD19A2.006:2326137147</GranuleUR>
+        <DbID>2326137147</DbID>
+        <InsertTime>2019-01-09 00:13:33.397</InsertTime>
+        <LastUpdate>2019-01-09 00:13:33.397</LastUpdate>
+        <CollectionMetaData>
+            <ShortName>MCD19A2</ShortName>
+            <VersionID>6</VersionID>
+        </CollectionMetaData>
+        <DataFiles>
+            <DataFileContainer>
+                <DistributedFileName>MCD19A2.A2019001.h26v03.006.2019009051509.hdf</DistributedFileName>
+                <FileSize>4540449</FileSize>
+                <ChecksumType>CKSUM</ChecksumType>
+                <Checksum>1914681227</Checksum>
+                <ChecksumOrigin>DPLIngst</ChecksumOrigin>
+            </DataFileContainer>
+        </DataFiles>
+        <ECSDataGranule>
+            <SizeMBECSDataGranule>4.33011</SizeMBECSDataGranule>
+            <ReprocessingPlanned>further update is anticipated</ReprocessingPlanned>
+            <ReprocessingActual>reprocessed</ReprocessingActual>
+            <LocalGranuleID>MCD19A2.A2019001.h26v03.006.2019009051509.hdf</LocalGranuleID>
+            <DayNightFlag>Both</DayNightFlag>
+            <ProductionDateTime>2019-01-09 05:15:09.000</ProductionDateTime>
+            <LocalVersionID>SCF V6.0.32</LocalVersionID>
+        </ECSDataGranule>
+        <PGEVersionClass>
+            <PGEVersion>6.0.41</PGEVersion>
+        </PGEVersionClass>
+        <RangeDateTime>
+            <RangeEndingTime>22:30:00.000000</RangeEndingTime>
+            <RangeEndingDate>2019-01-01</RangeEndingDate>
+            <RangeBeginningTime>01:00:00.000000</RangeBeginningTime>
+            <RangeBeginningDate>2019-01-01</RangeBeginningDate>
+        </RangeDateTime>
+        <SpatialDomainContainer>
+            <HorizontalSpatialDomainContainer>
+                <GPolygon>
+                    <Boundary>
+                        <Point>
+                            <PointLongitude>124.112210800127</PointLongitude>
+                            <PointLatitude>49.810399392098</PointLatitude>
+                        </Point>
+                        <Point>
+                            <PointLongitude>161.174222757287</PointLongitude>
+                            <PointLatitude>60.1655249371053</PointLatitude>
+                        </Point>
+                        <Point>
+                            <PointLongitude>-170.877512900499</PointLongitude>
+                            <PointLatitude>58.9182336479991</PointLatitude>
+                        </Point>
+                        <Point>
+                            <PointLongitude>142.400613825837</PointLongitude>
+                            <PointLatitude>49.4111823528233</PointLatitude>
+                        </Point>
+                    </Boundary>
+                </GPolygon>
+            </HorizontalSpatialDomainContainer>
+        </SpatialDomainContainer>
+        <OrbitCalculatedSpatialDomain>
+            <OrbitCalculatedSpatialDomainContainer>
+                <OrbitNumber>101263</OrbitNumber>
+                <EquatorCrossingLongitude>137.943957840642</EquatorCrossingLongitude>
+                <EquatorCrossingDate>2019-01-01</EquatorCrossingDate>
+                <EquatorCrossingTime>01:18:42.341901</EquatorCrossingTime>
+            </OrbitCalculatedSpatialDomainContainer>
+        </OrbitCalculatedSpatialDomain>
+        <MeasuredParameter>
+            <MeasuredParameterContainer>
+                <ParameterName>MODIS MAIAC file</ParameterName>
+                <QAStats>
+                    <QAPercentMissingData>0</QAPercentMissingData>
+                    <QAPercentOutofBoundsData>39</QAPercentOutofBoundsData>
+                    <QAPercentInterpolatedData>0</QAPercentInterpolatedData>
+                    <QAPercentCloudCover>43</QAPercentCloudCover>
+                </QAStats>
+                <QAFlags>
+                    <AutomaticQualityFlag>Passed</AutomaticQualityFlag>
+                    <AutomaticQualityFlagExplanation>output file is created and good</AutomaticQualityFlagExplanation>
+                    <OperationalQualityFlag>Passed</OperationalQualityFlag>
+                    <OperationalQualityFlagExplanation>Passed</OperationalQualityFlagExplanation>
+                    <ScienceQualityFlag>Not Investigated</ScienceQualityFlag>
+                    <ScienceQualityFlagExplanation>See http://landweb.nascom.nasa.gov/cgi-bin/QA_WWW/qaFlagPage.cgi?sat=Terra+Aqua&amp;ver=C6 for the product Science Quality status.</ScienceQualityFlagExplanation>
+                </QAFlags>
+            </MeasuredParameterContainer>
+        </MeasuredParameter>
+        <Platform>
+            <PlatformShortName>Terra</PlatformShortName>
+            <Instrument>
+                <InstrumentShortName>MODIS</InstrumentShortName>
+                <Sensor>
+                    <SensorShortName>MODIS</SensorShortName>
+                </Sensor>
+            </Instrument>
+        </Platform>
+        <Platform>
+            <PlatformShortName>Aqua</PlatformShortName>
+            <Instrument>
+                <InstrumentShortName>MODIS</InstrumentShortName>
+                <Sensor>
+                    <SensorShortName>MODIS</SensorShortName>
+                </Sensor>
+            </Instrument>
+        </Platform>
+        <PSAs>
+            <PSA>
+                <PSAName>QAPERCENTGOODQUALITY</PSAName>
+                <PSAValue>0</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>QAPERCENTOTHERQUALITY</PSAName>
+                <PSAValue>57</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>HORIZONTALTILENUMBER</PSAName>
+                <PSAValue>26</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>VERTICALTILENUMBER</PSAName>
+                <PSAValue>03</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>TileID</PSAName>
+                <PSAValue>51026003</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>identifier_product_doi</PSAName>
+                <PSAValue>10.5067/MODIS/MCD19A2.006</PSAValue>
+            </PSA>
+            <PSA>
+                <PSAName>identifier_product_doi_authority</PSAName>
+                <PSAValue>http://dx.doi.org</PSAValue>
+            </PSA>
+        </PSAs>
+        <InputGranule>
+            <InputPointer>MODMAIAC1km.A2019001.h26v03.006.2019003025801.hdf</InputPointer>
+            <InputPointer>MODMAIAChkm.A2019001.h26v03.006.2019003025822.hdf</InputPointer>
+            <InputPointer>MODMAIAC1kmGEO.A2019001.h26v03.006.2019003025830.hdf</InputPointer>
+            <InputPointer>MYDMAIAC1km.A2019001.h26v03.006.2019003030832.hdf</InputPointer>
+            <InputPointer>MYDMAIAChkm.A2019001.h26v03.006.2019003030850.hdf</InputPointer>
+            <InputPointer>MYDMAIAC1kmGEO.A2019001.h26v03.006.2019003030858.hdf</InputPointer>
+        </InputGranule>
+        <BrowseProduct>
+            <BrowseGranuleId>UR:10:DsShESDTUR:UR:15:DsShSciServerUR:13:[EDC:DSSDSRV]:24:BR:Browse.001:2326137152</BrowseGranuleId>
+        </BrowseProduct>
+    </GranuleURMetaData>
+</GranuleMetaDataFile>
+
+
